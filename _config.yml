@@ -78,6 +78,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# /02-identity-fundamentals/03-saml/ rather than …/03-saml.html
+permalink: pretty
+
 relative_links:
   enabled: true
   collections: false
