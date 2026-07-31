@@ -1,0 +1,71 @@
+- num: "01"
+  title: "IT Fundamentals"
+  url: "/01-it-fundamentals/"
+  pages: 9
+  color: "#818cf8"
+  desc: "Identity is a distributed systems problem wearing a security costume. Every hard IAM incident resolves to DNS, certificates, time, replication or retry semantics."
+  chips: ["Directory services & LDAP", "Active Directory", "DNS & networking", "Cryptography", "PKI & TLS", "Windows / Linux", "Cloud IAM", "Data modelling", "HTTP & APIs"]
+
+- num: "02"
+  title: "Identity Fundamentals"
+  url: "/02-identity-fundamentals/"
+  pages: 21
+  color: "#22d3ee"
+  desc: "The core of the discipline. Protocols are finite and learnable; the models — who is authoritative, what is a role, when does access end — are where architects are made."
+  chips: ["SAML", "OAuth 2.x", "OIDC", "JWT", "SCIM", "Kerberos", "FIDO2 & passkeys", "MFA", "Sessions", "Federation", "RBAC / ABAC / ReBAC", "Policy as code", "Joiner-Mover-Leaver", "IGA", "Role mining", "SoD", "PAM"]
+
+- num: "03"
+  title: "Identity Domains"
+  url: "/03-identity-domains/"
+  pages: 6
+  color: "#34d399"
+  desc: "The same concepts behave differently at 50,000 employees versus 50 million customers versus 500,000 workloads. Know which domain you're designing for."
+  chips: ["Workforce", "CIAM", "B2B & partner", "Non-human identities", "Workload identity", "OT / IoT / edge"]
+
+- num: "04"
+  title: "Architecture Practice"
+  url: "/04-architecture-practice/"
+  pages: 8
+  color: "#a78bfa"
+  desc: "How to actually architect: target states you can sequence, integration that survives partial failure, migrations without big-bang cutover, and decisions you can defend."
+  chips: ["Architectural thinking", "Reference blueprints", "Integration patterns", "Migration & coexistence", "HA / DR / scale", "Securing IAM itself", "Anti-patterns", "Diagrams & ADRs"]
+
+- num: "05"
+  title: "Platform Landscape"
+  url: "/05-platform-landscape/"
+  pages: 8
+  color: "#f472b6"
+  desc: "The Rosetta stone. Same concepts, different vocabulary — an Identity Cube, a Person object and an identity profile are all the same correlated record."
+  chips: ["Vendor-neutral map", "SailPoint", "One Identity", "Ping Identity", "Okta & Entra ID", "Saviynt / ForgeRock / Keycloak", "PAM vendors", "How to choose"]
+
+- num: "06"
+  title: "Business & Risk"
+  url: "/06-business-and-risk/"
+  pages: 7
+  color: "#fbbf24"
+  desc: "The step that separates senior engineers from architects. A design you can't express in risk, cost and audit language will lose every funding argument."
+  chips: ["Business alignment", "Identity risk", "SOX / GDPR / NIS2 / DORA / PCI", "Operating model", "Metrics & KPIs", "Business case & TCO", "Stakeholders"]
+
+- num: "07"
+  title: "Delivery & Operations"
+  url: "/07-delivery/"
+  pages: 6
+  color: "#38bdf8"
+  desc: "The best architecture that can't be sequenced into three-month increments is worse than a decent one that can. Plus: who runs this at 3am, and how."
+  chips: ["Programme delivery", "Discovery & assessment", "Requirements", "Testing", "Run & operations", "Identity incident response"]
+
+- num: "08"
+  title: "The Frontier"
+  url: "/08-frontier/"
+  pages: 5
+  color: "#fb7185"
+  desc: "Human identity grows linearly. Machine and agent identity does not. Identity is the fastest-moving security domain right now, and this is where it's going."
+  chips: ["Zero Trust & continuous access", "ITDR", "AI agents & agentic identity", "Verifiable credentials", "Post-quantum & crypto agility"]
+
+- num: "09"
+  title: "Practice"
+  url: "/09-practice/"
+  pages: 5
+  color: "#94a3b8"
+  desc: "Reading produces a comfortable illusion of competence. Worked case studies, design exercises, whiteboard scenarios and interviews break it."
+  chips: ["Case studies", "Design exercises", "Whiteboard scenarios", "Interview prep", "Labs on zero budget"]

@@ -87,7 +87,6 @@ exclude:
   - Gemfile.lock
   - vendor
   - .github
-  - CONTRIBUTING.md
   - CLAUDE.md
 
 kramdown:

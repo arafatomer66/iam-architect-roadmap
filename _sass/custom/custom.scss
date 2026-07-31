@@ -1,0 +1,221 @@
+// ===========================================================================
+//  IAM Architect Roadmap — premium skin over just-the-docs (dark scheme)
+// ===========================================================================
+
+:root {
+  --iam-a1: #818cf8;
+  --iam-a2: #22d3ee;
+  --iam-a3: #34d399;
+  --iam-a4: #fbbf24;
+  --iam-a5: #fb7185;
+  --iam-line: rgba(148, 163, 184, 0.16);
+  --iam-line-2: rgba(148, 163, 184, 0.3);
+  --iam-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+// ── typography ─────────────────────────────────────────────────────────────
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #070b14;
+  background-image:
+    radial-gradient(900px 500px at 12% -8%, rgba(99, 102, 241, 0.13), transparent 60%),
+    radial-gradient(760px 460px at 100% 4%, rgba(34, 211, 238, 0.09), transparent 62%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-content {
+  h1, h2, h3, h4, h5 { letter-spacing: -0.028em; font-weight: 700; }
+
+  h1 {
+    font-size: 2.15rem !important;
+    line-height: 1.15;
+    background: linear-gradient(110deg, #ffffff 0%, #a5b4fc 55%, #67e8f9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 0.2em;
+    animation: iam-rise 0.6s var(--iam-ease) both;
+  }
+
+  h2 {
+    margin-top: 2.4rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--iam-line);
+    font-size: 1.45rem !important;
+  }
+
+  h3 { margin-top: 1.9rem; font-size: 1.12rem !important; color: #cbd5e1; }
+
+  p, li { color: #b6c4da; font-weight: 350; }
+  strong { color: #eef2ff; font-weight: 600; }
+
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(34, 211, 238, 0.32);
+    transition: border-color 0.2s, color 0.2s;
+    &:hover { color: var(--iam-a2); border-bottom-color: var(--iam-a2); }
+  }
+}
+
+@keyframes iam-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+// page content fades in
+.main-content > *:not(h1) { animation: iam-fade 0.5s var(--iam-ease) both; }
+@keyframes iam-fade { from { opacity: 0; } to { opacity: 1; } }
+
+// ── tables ─────────────────────────────────────────────────────────────────
+.main-content table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--iam-line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  font-size: 0.86rem;
+
+  thead th {
+    background: linear-gradient(180deg, rgba(99, 102, 241, 0.16), rgba(99, 102, 241, 0.06));
+    color: #e8edf7;
+    border-bottom: 1px solid var(--iam-line-2);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  td, th { border-color: var(--iam-line); }
+  tbody tr { transition: background 0.2s; }
+  tbody tr:hover { background: rgba(255, 255, 255, 0.035); }
+}
+
+// ── code ───────────────────────────────────────────────────────────────────
+.main-content {
+  code { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+  code:not(pre code) {
+    background: rgba(129, 140, 248, 0.13);
+    color: #c7d2fe;
+    border: 1px solid rgba(129, 140, 248, 0.2);
+    border-radius: 6px;
+    padding: 0.12em 0.4em;
+    font-size: 0.85em;
+  }
+
+  div.highlighter-rouge, figure.highlight, pre.highlight {
+    background: #0b1120;
+    border: 1px solid var(--iam-line);
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  }
+}
+
+// ── blockquotes & callouts ─────────────────────────────────────────────────
+.main-content blockquote {
+  border-left: 3px solid var(--iam-a1);
+  background: rgba(129, 140, 248, 0.06);
+  border-radius: 0 10px 10px 0;
+  padding: 0.9rem 1.1rem;
+  margin-left: 0;
+}
+
+// just-the-docs callouts, upgraded
+.main-content .callout,
+.main-content blockquote.note,
+.main-content blockquote.concept,
+.main-content blockquote.architect,
+.main-content blockquote.warning,
+.main-content blockquote.vendor {
+  position: relative;
+  border-left-width: 3px;
+  border-radius: 0 12px 12px 0;
+  padding: 1rem 1.15rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+  transition: transform 0.3s var(--iam-ease), box-shadow 0.3s var(--iam-ease);
+
+  &:hover { transform: translateX(3px); box-shadow: 0 10px 32px rgba(0, 0, 0, 0.36); }
+}
+
+.main-content blockquote.concept  { border-left-color: #a78bfa; background: rgba(167, 139, 250, 0.08); }
+.main-content blockquote.architect{ border-left-color: var(--iam-a3); background: rgba(52, 211, 153, 0.075); }
+.main-content blockquote.warning  { border-left-color: var(--iam-a5); background: rgba(251, 113, 133, 0.075); }
+.main-content blockquote.vendor   { border-left-color: var(--iam-a4); background: rgba(251, 191, 36, 0.07); }
+.main-content blockquote.note     { border-left-color: #38bdf8; background: rgba(56, 189, 248, 0.07); }
+
+// ── task-list style "Architect's checklist" ────────────────────────────────
+.main-content ul li input[type="checkbox"] {
+  accent-color: var(--iam-a2);
+  margin-right: 0.5rem;
+  transform: scale(1.1);
+}
+
+// ── sidebar ────────────────────────────────────────────────────────────────
+.side-bar {
+  background: rgba(9, 13, 23, 0.86);
+  border-right: 1px solid var(--iam-line);
+  backdrop-filter: blur(10px);
+}
+
+.site-title {
+  font-weight: 800 !important;
+  letter-spacing: -0.03em;
+  background: linear-gradient(110deg, #a5b4fc, #67e8f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.nav-list .nav-list-item .nav-list-link {
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, padding-left 0.2s var(--iam-ease);
+
+  &:hover { background: rgba(129, 140, 248, 0.1); padding-left: 1.1rem; }
+
+  &.active {
+    background: linear-gradient(90deg, rgba(129, 140, 248, 0.2), transparent);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: inset 2px 0 0 var(--iam-a2);
+  }
+}
+
+// ── search ─────────────────────────────────────────────────────────────────
+.search-input {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  transition: box-shadow 0.25s;
+  &:focus { box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.35); }
+}
+.search-result:hover, .search-result.active { background: rgba(129, 140, 248, 0.14); }
+
+// ── mermaid ────────────────────────────────────────────────────────────────
+.mermaid {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--iam-line);
+  border-radius: 14px;
+  padding: 1.1rem;
+  margin: 1.4rem 0;
+  overflow-x: auto;
+}
+
+// ── misc chrome ────────────────────────────────────────────────────────────
+.main-content hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--iam-line-2), transparent);
+  margin: 2.2rem 0;
+}
+
+#main-header { backdrop-filter: blur(10px); }
+
+.main-content img { border-radius: 12px; }
+
+// keep wide tables scrollable rather than breaking the page
+.main-content .table-wrapper { overflow-x: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .main-content h1,
+  .main-content > *:not(h1) { animation: none; }
+  .main-content .callout:hover { transform: none; }
+}
