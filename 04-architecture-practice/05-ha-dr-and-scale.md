@@ -93,7 +93,7 @@ Numbers to establish for any design:
 
 **Where the bottlenecks actually appear:** directory search on unindexed attributes; database connection pools; session store capacity; slow-by-design password hashing under a login storm (correct, but must be capacity-planned); rate limits at downstream SaaS during bulk provisioning; and JWKS endpoint load if consumers don't cache.
 
-**Cost of scale** is not just infrastructure: per-user licensing means growth has a linear cost that should appear in the [business case](../06-business-and-risk/06-business-case.md).
+**Cost of scale** is not just infrastructure: per-user licensing means growth has a linear cost that should appear in the [business case](../06-business-and-risk/07-stakeholders.md).
 
 ---
 

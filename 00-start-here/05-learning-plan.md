@@ -158,7 +158,7 @@ gantt
 
 - **Write.** One post, internal wiki page or LinkedIn explainer per month on what you just learned. Nothing exposes shallow understanding faster than writing for others.
 - **Watch real incidents.** Read public breach write-ups where identity was the vector (Okta support-system compromises, Snowflake-era credential attacks, Midnight Blizzard-style OAuth consent abuse). Ask: *which control would have stopped this, and would I have designed it in?*
-- **Join the conversation.** IDPro's Body of Knowledge, the OAuth/OIDC working group mailing lists, vendor community forums. See [reading list](../10-reference/05-reading-list.md).
+- **Join the conversation.** IDPro's Body of Knowledge, the OAuth/OIDC working group mailing lists, vendor community forums. See [reading list](../10-reference/06-reading-list.md).
 - **Get one certification, late.** Certifications are a hiring filter, not a learning tool. Do one in month 10–12 when it costs you two weeks instead of two months. See [certifications](../10-reference/04-certifications.md).
 
 ---
